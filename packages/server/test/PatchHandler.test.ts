@@ -13,7 +13,7 @@ import {EVENTS} from '../src/constants'
 describe('PatchHandler', () => {
   const path = '/test/output'
   let req: http.IncomingMessage
-  let res: httpMocks.MockResponse<http.ServerResponse>
+  let res: httpMocks.MockResponse<any>
   let store: sinon.SinonStubbedInstance<DataStore>
   let handler: InstanceType<typeof PatchHandler>
 

@@ -13,7 +13,7 @@ describe('HeadHandler', () => {
   const fake_store = sinon.createStubInstance(DataStore)
   const handler = new HeadHandler(fake_store, {relativeLocation: true, path})
   let req: http.IncomingMessage
-  let res: httpMocks.MockResponse<http.ServerResponse>
+  let res: httpMocks.MockResponse<any>
 
   beforeEach(() => {
     req = {url: `${path}/1234`, method: 'HEAD'} as http.IncomingMessage

@@ -9,7 +9,7 @@ import {DataStore} from '../src/models'
 describe('BaseHandler', () => {
   const store = new DataStore()
   const handler = new BaseHandler(store, {path: '/test/output'})
-  let res: httpMocks.MockResponse<http.ServerResponse>
+  let res: httpMocks.MockResponse<any>;
 
   beforeEach(() => {
     res = httpMocks.createResponse()

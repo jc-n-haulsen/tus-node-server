@@ -18,7 +18,7 @@ const SERVER_OPTIONS = {
 
 describe('PostHandler', () => {
   let req: http.IncomingMessage
-  let res: httpMocks.MockResponse<http.ServerResponse>
+  let res: httpMocks.MockResponse<any>
 
   const fake_store = sinon.createStubInstance(DataStore)
   fake_store.hasExtension.withArgs('creation-defer-length').returns(true)

@@ -15,7 +15,7 @@ describe('DeleteHandler', () => {
   const fake_store = sinon.createStubInstance(DataStore)
   let handler: InstanceType<typeof DeleteHandler>
   let req: http.IncomingMessage
-  let res: httpMocks.MockResponse<http.ServerResponse>
+  let res: httpMocks.MockResponse<any>
 
   beforeEach(() => {
     fake_store.remove.resetHistory()

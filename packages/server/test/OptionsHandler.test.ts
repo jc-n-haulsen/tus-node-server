@@ -15,7 +15,7 @@ describe('OptionsHandler', () => {
   const handler = new OptionsHandler(store, options)
 
   let req: http.IncomingMessage
-  let res: httpMocks.MockResponse<http.ServerResponse>
+  let res: httpMocks.MockResponse<any>
 
   beforeEach(() => {
     req = {url: `${options.path}/1234`, method: 'OPTIONS'} as http.IncomingMessage
