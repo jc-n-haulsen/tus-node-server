@@ -130,7 +130,7 @@ export class PostHandler extends BaseHandler {
       }
     }
 
-    const writtenRes = this.write(res, 201, {Location: url, ...headers})
+    const writtenRes = this.write(res, 201, {Location: url, ...headers}, res?.statusMessage);
 
     if (isFinal) {
       this.emit(EVENTS.POST_FINISH, req, writtenRes, upload)
